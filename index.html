@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pedro Pires</title>
+<meta name="description" content="Pedro Pires, Assistant Professor of Economics at Nova School of Business and Economics.">
+<link rel="canonical" href="https://www.pedropires.io">
+<meta property="og:site_name" content="Pedro Pires">
+<meta property="og:title" content="Pedro Pires">
+<meta property="og:url" content="https://www.pedropires.io">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Palette taken from the Squarespace site.css */
+  --white: hsl(0,0%,100%);
+  --black: hsl(0,0%,0%);
+  --light-accent: hsl(40,8.10810811%,92.74509804%);
+
+  /* Fonts: confirm with Inspect > Computed > font-family on the live site */
+  --body-font: 'Poppins', sans-serif;
+  --heading-font: 'Poppins', sans-serif;
+  --title-font: 'Poppins', sans-serif;
+  --nav-font: 'Poppins', sans-serif;
+
+  /* Sizes: confirm with Inspect > Computed > font-size on the live site */
+  --text-size: 1.05rem;
+  --small-size: 0.95rem;
+  --large-size: 1.4rem;
+  --h3-size: 1.9rem;
+  --title-size: 1.5rem;
+  --nav-size: 1rem;
+
+  --max-width: 1400px;
+  --gutter: 6vw;
+  --gap: 11px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--white);color:var(--black);
+  font-family:var(--body-font);font-size:var(--text-size);line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--black)}
+p{margin:0 0 1em}
+
+/* Header */
+.header{background:var(--light-accent);position:relative;z-index:10}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:2.8vw var(--gutter);
+}
+.site-title{font-family:var(--title-font);font-size:var(--title-size);text-decoration:none;color:var(--black)}
+.nav a{font-family:var(--nav-font);font-size:var(--nav-size);text-decoration:none;margin-left:1.6em}
+.nav a:hover{opacity:.6}
+.burger{display:none;background:none;border:0;padding:6px;cursor:pointer}
+.burger span{display:block;width:26px;height:1px;background:var(--black);margin:6px 0;transition:transform .2s}
+.menu{
+  display:none;position:fixed;inset:0;background:var(--light-accent);z-index:9;
+  flex-direction:column;align-items:center;justify-content:center;gap:1.2em;
+}
+.menu a{font-family:var(--nav-font);font-size:1.8rem;text-decoration:none}
+body.menu-open .menu{display:flex}
+body.menu-open .burger span:first-child{transform:translateY(3.5px) rotate(45deg)}
+body.menu-open .burger span:last-child{transform:translateY(-3.5px) rotate(-45deg)}
+
+/* Layout grid (mirrors the Squarespace fluid engine: 24 columns desktop, 8 mobile) */
+.section{padding:6.6vw 0}
+.grid{
+  display:grid;grid-template-columns:repeat(24,minmax(0,1fr));gap:var(--gap);
+  width:min(var(--max-width), calc(100vw - 2*var(--gutter)));margin:0 auto;
+}
+.photo{grid-column:3/10;align-self:center;aspect-ratio:100/117.43;overflow:hidden}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block}
+.bio{grid-column:12/23;align-self:center}
+.research{grid-column:2/24}
+
+/* Typography classes from the original */
+.small{font-size:var(--small-size)}
+.large{font-size:var(--large-size);margin-top:1.4em}
+h3{font-family:var(--heading-font);font-size:var(--h3-size);font-weight:500;line-height:1.2;margin:0 0 .8em}
+
+@media (max-width:767px){
+  .header-inner{padding:6vw var(--gutter)}
+  .nav{display:none}
+  .burger{display:block}
+  .grid{grid-template-columns:repeat(8,minmax(0,1fr))}
+  .photo{grid-column:2/8}
+  .bio{grid-column:1/-1;margin-top:24px}
+  .research{grid-column:1/-1}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <a class="site-title" href="/">Pedro Pires</a>
+    <nav class="nav">
+      <a href="s/Pires_CV.pdf" target="_blank">CV</a>
+      <a href="#research">Research</a>
+    </nav>
+    <button class="burger" aria-label="Open Menu" onclick="document.body.classList.toggle('menu-open')"><span></span><span></span></button>
+  </div>
+</header>
+<div class="menu" onclick="document.body.classList.remove('menu-open')">
+  <a href="s/Pires_CV.pdf" target="_blank">CV</a>
+  <a href="#research">Research</a>
+</div>
+
+<main>
+  <section class="section">
+    <div class="grid">
+      <div class="photo"><img src="images/avatar.jpg" alt="Pedro Pires" width="1536" height="2048"></div>
+      <div class="bio">
+        <p class="small">I am Pedro Pires. I am an Assistant Professor of Economics at the Nova School of Business and Economics and a member of the NOVAFRICA research center. I work on topics in behavioral, labor and development economics.</p>
+        <p class="small">I received a Ph.D. in Economics from the University of California, Berkeley in 2023. Before that, I received a Masters in Economics in 2016 from the Sao Paulo School of Economics (FGV) and a BA in Economics in 2013 from the University of Sao Paulo (USP), Brazil.</p>
+        <p class="small">Email me at pedro.m.pires [at] novasbe [dot] pt</p>
+        <p class="small">Click here for my <a href="s/Pires_CV.pdf" target="_blank">CV</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="research">
+    <div class="grid">
+      <div class="research">
+        <h3>Research</h3>
+
+        <p class="large">Working Papers</p>
+
+        <p class="small"><a target="_blank" href="s/Pires_HowMuchCanYouMake_v3.pdf"><strong>How Much Can You Make? Misprediction and Biased Memory in Gig Jobs </strong>[Draft]</a></p>
+        <p class="small">Abstract: Flexibility is an increasingly prominent feature of many jobs. In the gig economy, workers can choose their work hours and face wages that vary across hours and weeks. This increased complexity adds challenges to predicting and understanding job outcomes. Incomplete information or behavioral biases can then lead to inaccurate beliefs about pay and labor supply. We test this hypothesis by collecting novel survey data on 454 delivery and ride share gig workers in the United States. Comparing gig workers’ beliefs with data on their actual job performance, we find they overestimate their predictions (43%) and their recalls (31%) of weekly pay, despite it being reported prominently in their earnings statements. Furthermore, gig workers underestimate expenses and overestimate hours worked. The results are consistent with selective recall: when forming and updating their beliefs in noisy environments, workers overweight past high-paying periods. We then examine how biased beliefs affect labor market decisions. We derive predictions from a behavioral labor supply model and test them. We conclude that job choices and labor supply decisions are likely influenced by mistaken beliefs in flexible gig jobs.</p>
+
+        <p class="small"><a target="_blank" href="s/WassermanPires_Shrinkflation.pdf"><strong>Shrinkflation: What Happens When Package Sizes Change?</strong> [Draft]</a> (with <a href="https://sites.google.com/view/luciowasserman">Lucio Wasserman</a>)</p>
+        <p>Abstract: Package size is a central characteristic in consumer goods, and changes in size have implications for consumer demand, welfare, policy, and firm behavior. This paper first develops a method to identify size changes at scale. We apply it to retail scanner data and show that size reductions are considerably more common than increases. Next, we estimate the dynamic demand response to size changes using an event study approach. The demand response to size increases is immediate and stable over time. In contrast, after size decreases, demand has a sluggish response: the size elasticity is smaller in the short term than in the medium term. An incentivized shopping experiment shows that individuals deviate from optimal behavior by responding less to size than to price, and provides evidence of attention as a mechanism. With the experiment, we test policy interventions, showing that displaying unit prices and making sizes more prominent can reduce welfare losses. On the other hand, size change labels generate a bias in the opposite direction, causing individuals to over-respond to sizes and thus generating only moderate reductions in welfare losses. We explain the empirical results with a dynamic demand model that allows for inattention, paired with a supply model in which firms strategically advertise size increases but not reductions, and derive sufficient statistics for the consumer-surplus effects of inattention and related policies. In the short term, the consumer surplus losses from inattention after a median size reduction are equivalent to the consumer share of deadweight loss from a tax that increases the price by 6%.</p>
+
+        <p><a target="_blank" href="s/Pires_DomesticWorkerFormalization.pdf"><strong>When Labor Rights Become Actionable: Evidence from Domestic Work in Brazil </strong>[Draft]</a></p>
+        <p>Abstract: This paper studies Brazil’s Constitutional Amendment 72/2013, which expanded the set of labor rights available to domestic workers, a largely informal occupation performed inside private homes where government inspections are severely limited. Although the amendment raised the cost of formal employment, many costly provisions were not implemented until 2015. In the interim, the reform generated intense media coverage and public debate about domestic workers’ rights. Using an event study design with multiple control groups, we find that the reform increased formal employment by 2 to 5 percentage points, raised real wages by 4 to 7 percent, improved minimum wage compliance, and reduced weekly hours and total domestic work employment. The rise in formalization is difficult to reconcile with higher formal labor costs alone. We provide evidence for a worker-side enforcement channel: labor claims involving domestic work increased sharply after the reform, and formalization effects were larger in places where workers had greater exposure to domestic-worker peers, recent formalization events, and pre-reform access to labor courts. The results show that labor regulation can increase compliance in hard-to-monitor markets by making legal rights more salient and actionable to workers.</p>
+
+        <p class="large">Selected Work in Progress</p>
+
+        <p class="small"><strong>Finding the Perfect Hire: Screening Strategies and Job Match Quality</strong> (with Priscila De Oliveira and Ben Scuderi)</p>
+        <p>Abstract: This paper examines how companies make recruitment decisions and how these decisions align with post-hiring productivity. We use a novel dataset that links proprietary data from a hiring platform in Brazil covering over 20 million job applications with matched employer-employee labor market data. We begin by analyzing how offer decisions relate to applicant characteristics assessing implicit weights placed on, for example, education, past experience, and demographics. We then evaluate how well firm offers predict post-hiring outcomes, including turnover, tenure, and salary growth. We then use machine learning models to directly predict productivity based on job applicant hiring characteristics. We identify possible inefficiencies in hiring practices by comparing firms’ actual offer decisions to our predictions from machine learning models. Finally, we investigate when these divergences occur, first exploring which characteristics correlate with them the most. We then discuss mechanisms such as stereotyping, discrimination, and complexity in decision-making.</p>
+
+        <p class="small"><strong>Signaling Creativity: How Idea Contests Shape Employee Trajectories</strong> (with Priscila de Oliveira)</p>
+        <p>Abstract: This study examines the impact of firm-level innovation contests on employee outcomes, using novel data from a large company in Brazil linked to an employer-employee matched dataset. In innovation contests, workers propose changes to current firm practices. Ideas are then evaluated internally by a panel of specialists. We explore whether these contests allow workers in non-creative roles to signal creativity and how idea submission and acceptance influence career trajectories, including promotions, salary growth, and transitions to more creative roles within the firm.</p>
+
+        <p><strong>Unpacking the Beliefs Behind Job Recruitment Decisions</strong> (with Priscila de Oliveira)</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+</body>
+</html>
